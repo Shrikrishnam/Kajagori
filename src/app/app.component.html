@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <style>
+      #nav1{
+        background-color: yellow;
+        float: right;
+        border: solid red 3px;
+        border-radius: 10px;
+        padding: 10px;
+        width: 80%;
+        
+      }
+      #div1{
+        padding: 30px;
+        background-color: aqua;
+      }
+      #div2{
+        text-align: center;
+        color: blue;
+        font-weight: bold;
+      }
+    </style>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+   <div class="container" id="div1">
+   <div class="logo">
+    <div class="container" id="div2">
+      <h1>ANGULAR ASSESSMENT</h1>
+    </div>
+  </div>
+  <hr class="dashed">
+  <div class="navbar" id="nav1">
+    <ul class="nav nav-pills nav-fill ">
+        <li class="nav-item"><a href="#" class="nav-link active bg-primary">HOME</a></li>
+        <li class="nav-item"><a href="./place-fitness-trainer-appointment" class="nav-link active bg-danger">PLACE APPOINTMENT</a></li>
+        <li class="nav-item"><a href="./view-appointment" class="nav-link active bg-success">VIEW APPOINTMENT</a></li>
+        <li class="nav-item"><a href="./contact-us" class="nav-link active bg-danger">CONTACT US</a></li>
+    </ul>
+</div>
+
+
+<div class="sidebar">
+  <button class="btn btn-primary" (click)="landingpage()">Home</button><br>
+  <button class="btn btn-success" (click)="placeAppointment()">Place Appointment</button><br>
+  <button class="btn btn-warning" (click)="viewAppointment()">View Appointment</button><br>
+  <button class="btn btn-danger" (click)="contactUspage()">Contact Us</button>
+
+</div>
+<router-outlet></router-outlet> 
+   
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </div>
+  </body>
+</html>
+

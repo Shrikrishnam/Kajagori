@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <style>
+      #div1{
+        background-color: yellow;
+        border: solid red 3px;
+        border-radius: 10px;
+        font-weight: bold;
+        font-size: 30px;
+        color: red;
+        text-align: center;
+        padding: 10px;
+      }
+
+      #div2{
+        padding: 30px;
+        background-color: orchid;
+        font-weight: bold;
+        font-size: 20px;
+      }
+
+    </style>
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container" >
+        
+            <form [formGroup]=" " (ngSubmit)="onSubmit()" novalidate>
+            
+            <div class="col-sm-18" id="div1">
+              <label>PLACE APPOINTMENT</label>
+            </div>
+
+            <div class="container" id="div2">
+
+            <div class="form-group row">
+                <label class="col-sm-3 form-control-label" for="firstname">First Name</label>
+                <div class="col-sm-9">
+                    <input type="text" id="firstname" name="firstname" class="form-control" formControlName="firstname" placeholder="First Name"
+                    [(ngModel)]="userModel.firstname" pattern="[a-zA-Z]*" autofocus/> 
+                </div>   
+            </div>
+        
+            <div class="form-group row">
+              <label class="col-sm-3 form-control-label" for="lastname">Last Name</label>
+              <div class="col-sm-9">
+                  <input type="text" id="lastname" name="lastname" class="form-control" formControlName="lastname" placeholder="Last Name"
+                  [(ngModel)]="userModel.lastname" pattern="[a-zA-Z]*" /> 
+              </div>   
+          </div>
+
+          <div class="form-group row">
+            <label class="col-sm-3 form-control-label" for="age">Age</label>
+            <div class="col-sm-9">
+                <input type="number" id="age" name="age" class="form-control" formControlName="age" placeholder="Age"
+                [(ngModel)]="userModel.age" min="18" max="60" /> 
+            </div>   
+        </div>
+
+        <div class="form-group row">
+          <label class="col-sm-3 form-control-label" for="phonenumber">Phone Number</label>
+          <div class="col-sm-9">
+              <input type="number" id="phonenumber" name="phonenumber" class="form-control" formControlName="phonenumber" placeholder="Phone number"
+              [(ngModel)]="userModel.phonenumber" pattern="[0-9]{10}" /> 
+          </div>   
+      </div>
+
+
+      <div class="form-group row">
+        <label class="col-sm-3 form-control-label" for="email">Email</label>
+        <div class="col-sm-9">
+            <input type="email" id="email" name="email" class="form-control" formControlName="email" placeholder="Email"
+            [(ngModel)]="userModel.email" /> 
+        </div>   
+    </div>
+
+    <fieldset>
+    <div class="form-group row">
+      <label class="col-sm-3 form-control-label" for="streetaddress">Street Address</label>
+      <div class="col-sm-9">
+          <input type="text" id="streetaddress" name="streetaddress" class="form-control" formControlName="streetaddress" placeholder="Street Address"
+          [(ngModel)]="userModel.streetaddress" /> 
+      </div>   
+    </div>
+    <div class="form-group row">
+      <label class="col-sm-3 form-control-label" for="city">City</label>
+      <div class="col-sm-9">
+          <input type="text" id="city" name="city" class="form-control" formControlName="city" placeholder="City"
+          [(ngModel)]="userModel.city" /> 
+      </div>   
+    </div>
+    <div class="form-group row">
+      <label class="col-sm-3 form-control-label" for="state">State</label>
+      <div class="col-sm-9">
+          <input type="text" id="state" name="state" class="form-control" formControlName="state" placeholder="State"
+          [(ngModel)]="userModel.state" /> 
+      </div>   
+    </div>
+    <div class="form-group row">
+      <label class="col-sm-3 form-control-label" for="country">Country</label>
+      <div class="col-sm-9">
+          <input type="text" id="country" name="country" class="form-control" formControlName="country" placeholder="Country"
+          [(ngModel)]="userModel.country" /> 
+      </div>   
+    </div>
+    <div class="form-group row">
+      <label class="col-sm-3 form-control-label" for="pincode">Pincode</label>
+      <div class="col-sm-9">
+          <input type="number" id="pincode" name="pincode" class="form-control" formControlName="pincode" placeholder="Pincode"
+          pattern="[A-Za-z]{6}" title="Six letter country code"  [(ngModel)]="userModel.pincode" /> 
+      </div>   
+  </div>
+  </fieldset>
+
+  <div class="form-group row">
+    <label class="col-sm-3 form-control-label" for="trainerpreference">Trainer preference</label>
+    <div class="col-sm-9">
+        <input type="text" id="trainerpreference" name="trainerpreference" class="form-control" formControlName="trainerpreference" placeholder="Trainer preference"
+        [(ngModel)]="userModel.trainerpreference" /> 
+    </div>   
+  </div>
+
+  <div class="form-group row">
+    <label class="col-sm-3 form-control-label" for="physiotherapist">Physiotherapist</label>
+    <div class="col-sm-9">
+        <input type="text" id="physiotherapist" name="physiotherapist" class="form-control" formControlName="physiotherapist" placeholder="Physiotherapist"
+        [(ngModel)]="userModel.physiotherapist" /> 
+    </div>   
+  </div>
+            
+
+  <div class="form-group row">
+    <label class="col-sm-3 form-control-label" for="packages">Packages</label>
+    <div class="col-sm-9">
+        <input type="number" id="packages" name="packages" class="form-control" formControlName="packages" placeholder="Packages"
+        [(ngModel)]="userModel.packages" /> 
+    </div>   
+</div>
+
+<div class="form-group row">
+  <label class="col-sm-3 form-control-label" for="inr">INR</label>
+  <div class="col-sm-9">
+      <input type="number" id="inr" name="inr" class="form-control" formControlName="inr" placeholder="INR"
+      [(ngModel)]="userModel.inr" /> 
+  </div>   
+</div>
+
+
+<div class="form-group row">
+  <label class="col-sm-3 form-control-label" for="paisa">Paisa</label>
+  <div class="col-sm-9">
+      <input type="number" id="paisa" name="paisa" class="form-control" formControlName="paisa" placeholder="Paisa"
+      [(ngModel)]="userModel.paisa" /> 
+  </div>   
+</div>
+        
+      
+      <button type="submit" class="btn btn-primary">SUBMIT</button>
+
+          </div>
+        </form>
+    </div>
+
+      
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
